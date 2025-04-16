@@ -31,7 +31,7 @@
 * 배열, 리스트, 쉼표로 나열된 값이 있으면 안된다.
 
 
-![img.png](img.png)
+![img.png](image/img.png)
 
 
 
@@ -43,7 +43,7 @@
 * 즉, 모든 속성이 전체 기본 키에 완전 종속되어야 함
 
 
-  ![img_1.png](img_1.png)
+  ![img_1.png](image/img_1.png)
 
 
 
@@ -54,7 +54,7 @@
 * 기본 키가 아닌 칼럼을 통해 다른 컬럼이 결정되면 안 됨
 
 
-  ![img_2.png](img_2.png)
+  ![img_2.png](image/img_2.png)
 
 
 
