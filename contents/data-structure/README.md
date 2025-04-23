@@ -3,6 +3,7 @@
 
 <details>
 <summary>Agenda</summary>
+
 - Linear Data Structures (선형 자료 구조)
     - Array & Linked List (배열 및 연결 리스트)
     - Stack & Queue (스택 및 큐)

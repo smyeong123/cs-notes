@@ -2,8 +2,6 @@
 
 힙(Heap)은 **완전 이진 트리(Complete Binary Tree)**를 기반으로 한 자료구조로, **우선순위 큐(Priority Queue)**를 구현하는 데 주로 사용된다.
 
----
-
 ## Binary Heap
 
 이진 힙은 **최대 힙(Max Heap)** 또는 **최소 힙(Min Heap)**으로 나뉘며, 다음과 같은 특징을 가진다:
