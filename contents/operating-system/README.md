@@ -90,7 +90,7 @@ void write_pipe(int fd, char *msg, Trader *trader) {
 ### **스레드**
 스레드는 프로세스 내부의 작은 실행 단위로, 프로세스 내 자원을 공유를 한다. 즉 같은 프로세스 안에 있는 여러 쓰레드는 메모리 영역을 공유 할 수 있다. 그리고 여러작업을 동시에 실행할 수 있도록 지원을 한다. 
 
-### Multi-Processing vs Multi-Threading
+## Multi-Processing vs Multi-Threading
 **멀티 프로세싱**은 한개 이상의 프로세스가 실행되는 시스템이다. 
 
 **장점**:
@@ -108,7 +108,7 @@ void write_pipe(int fd, char *msg, Trader *trader) {
 - 하나의 스레드에 문제가 발생하면 전체 스레드에 영향을 받음
 - 다수의 스레드가 공유 데이터에 접근할 경우에 동기화 기법이 필수
 
-## Context Switching (문맥 전환)
+### Context Switching (문맥 전환)
 문맥 전환은 현재 실행하던 작업을 **저장**하고 다른 작업을 수행하기 위한 과정이다.
 ### Scheduling (스케줄링)
 스케줄링: CPU 자원을 프로세스/쓰레드에 할당하는 전략이다.
@@ -125,33 +125,34 @@ void write_pipe(int fd, char *msg, Trader *trader) {
 2. 언터럽트 서비스 루틴 실행 : 인터럽트 발생 시 실행되는 코드
 3. 인터럽트 처리
 4. 원래 작업으로 복귀
-<!-- TODO --> 그림으로 설명하기
 
----
-## Process Synchronization (동기화)
+### Process Synchronization (동기화)
+주요 문제: Race condition(경쟁 상태), Deadlock(교착 상태), Starvation(기아 상태).
+
 Lock: 상호 배제(mutual exclusion)을 보장.
 
 Conditional Variable: 특정 조건을 만족할 때까지 쓰레드를 대기시키는 동기화 도구.
+#### Concurrency (동시성) vs Parallelism (병렬성)
+- concurrency : 여러 작업이 동시에 처리 
+- Parallelism : 어떤 하나의 작업을 여러개로 나눈후, 이를 동시에 처리해서 완성하는 개념
 
-Semaphore: 
-### Critical Section (임계 구역)
+#### Race Condition (경쟁 상태)
+레이스 컨티션은 두개 이상의 스레드가 공유 자원을 읽고 수정하면서 시간에 따라 다른 출력을 나타내는 상황이다.
+#### Critical Section (임계 구역)
 임계 구역은 두개 이상의 프로세스를 실행할때 동일한 자원을 동시에 접근하는 작업을 실행하는 코드 구간이다.
-### Mutex Lock
+1. Mutual Exclusion
+2. Progress
+3. Bounded Waiting
 
-### Semaphore
-공유 자원 접근을 제어하는 카운팅 기반 동기화 도구.
-
-### Monitor 
-현대적인 접근 방식.
-### Deadlock 
-
-### Concurrency (병행성)
-### Parallelism (병렬성)
-여러 프로세스 또는 쓰레드가 동시에 수행되는 상태.
-
-주요 문제: Race condition(경쟁 상태), Deadlock(교착 상태), Starvation(기아 상태).
-
-
+#### Solution 
+- Hardware
+	1. Memory Barriers
+	2. Compare & Swap
+	3. Atomic Variables
+- Software
+	1. Mutex Locks
+	2. Semaphores
+	3. Monitor 
 
 ## Memory Management (메모리 관리)
 
@@ -159,20 +160,20 @@ Semaphore:
 
 ![memory structure](_img/memory%20structure.png)
 
-### Virtual Memory (가상 메모리)
+## Virtual Memory (가상 메모리)
 Virtual Memory: 실제 물리적 메모리보다 큰 논리적 주소 공간을 제공 한다.
 
 장점:
 - 큰 프로그램 실행 가능
 - 메모리 효율적 사용
 
-#### Address Translation (주소 변환)
+### Address Translation (주소 변환)
 주소 변환은 가상 주소를 물리 주소로 변환하는 과정이다. 
 주로 MMU(Memory Management Unit)가 수행을 하며,.... 
 <!-- TODO -->
 
 
-#### Paging (페이징)
+### Paging (페이징)
 페이징은 가상 주소 공간을 고정 크기 단위인 페이지로 나누고, 물리적 주소를 페이지 프레임으로 나눠서 매핑하는걸 의미한다. 이떄 페이지 테이블을 이용해서 가상 메모리를 관리를 해준다.
 
 사용되는 알고리즘: FIFO, LRU(Least Recently Used), Optimal.
@@ -181,10 +182,12 @@ Virtual Memory: 실제 물리적 메모리보다 큰 논리적 주소 공간을 
 - 페이징 테이블
 - 접근 권한
 
-#### Swapping (스와핑)
+### Swapping (스와핑)
 스와핑은 물리 메모리 부족 시, 일부 페이지를 디스크로 이동하는 행위를 일컫는다.
 
 **Page Fault** (페이지 폴트): 필요한 페이지가 메모리에 없을 때 발생한다.
+
+## Cache (캐시)
 
 
 ---
