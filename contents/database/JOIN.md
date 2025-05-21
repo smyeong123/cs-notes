@@ -47,7 +47,7 @@ RIGHT JOIN grades g ON s.id = g.student_id;
 
 * FULL OUTER JOIN: 양쪽 테이블의 모든 데이터, 일치하지 않으면 NULL(MySQL에서는 직접 지원 안 함 -> UNION 사용)
 
--- PosterSQL, Oracle 등에서 가능
+-- PostgreSQL, Oracle 등에서 가능
 <pre><code>
 SELECT s.name, g.subject, g.score
 FROM students s
@@ -66,7 +66,7 @@ RIGHT JOIN grades g ON s.id = g.student_id;
 
 * SELF JOIN: 자기 자신과 JOIN
 
-하나 테이블을 두 번 JOIN
+하나의 테이블을 두 번 JOIN
 <pre><code>
 SELECT a.name AS 직원, b.name AS 상사
 FROM employees a
@@ -84,4 +84,4 @@ CROSS JOIN subjects;
 * JOIN 대상 칼럼에 INDEX가 있으면 성능 향상
 * JOIN 순서는 쿼리 최적화에 영향을 준다.
 * INNER JOIN은 불필요한 데이터가 제거되므로 더 빠를 수 있다.
-* 테이블이 클수롤 JOIN은 비용이 크다 -> 필요한 칼럼만 SELECT
+* 테이블이 클수록 JOIN은 비용이 크다 -> 필요한 칼럼만 SELECT

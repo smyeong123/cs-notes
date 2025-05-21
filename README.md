@@ -36,7 +36,7 @@ DB/yourgitid
 ### 기여 절차
 1. 저장소(repository)를 본인 계정으로 Fork 합니다.
 2. Fork된 본인의 저장소를 로컬로 Clone 합니다.
-3. 해당 명령어를 싱해주세요
+3. 해당 명령어를 실행해주세요
 ```
 git clone [본인의 저장소 주소]
 git checkout -b [주제 이름]/[본인의 Git 아이디] # 새로운 브랜치를 위의 규칙에 따라 생성한 후 체크아웃(checkout) 합니다.
