@@ -10,7 +10,7 @@
 ## ✅ 정의:
 
 데이터베이스(DB)란 데이터를 효율적으로 저장하고, 관리하고, 검색하기 위한 구조화된 데이터의 집합을 뜻한다.
-정보를 쳬계적으로 모아두고 필요할 때 꺼내 쓸 수 있도록 만든 저장소이다.
+정보를 체계적으로 모아두고 필요할 때 꺼내 쓸 수 있도록 만든 저장소이다.
 
 # 2.데이터베이스의 요소
 
@@ -19,8 +19,8 @@
 * ex) 이름, 나이, 주소, 이메일 등.
 
 ## 2) DBMS(Database Management System)
-* DBMS는 데이터베이스릉 생성, 관리, 조작하는 소프트웨어 시스템이다.
-* 대표적인 DBMS: MYSQL, PosterSQL, Oracle, MS SQL, SQLite 등.
+* DBMS는 데이터베이스를 생성, 관리, 조작하는 소프트웨어 시스템이다.
+* 대표적인 DBMS: MySQL, PostgreSQL, Oracle, MS SQL, SQLite 등.
 
 ## 3) 스키마(Schema)
 * 데이터베이스의 구조, 즉 데이터가 어떻게 구성되어 있는지를 정의하는 설계도.
@@ -31,8 +31,8 @@
 ## 1)관계형 데이터베이스(Relational Database)
 * 데이터를 테이블 형식으로 저장.
 * 각 테이블을 행(Row)과 열(Column)로 구성됨.
-* SQL를 사용하여 데이터를 조회 및 조작.
-* ex)MYSQL, PosterSQL, Oracle, MS SQL server 등.
+* SQL을 사용하여 데이터를 조회 및 조작.
+* ex) MySQL, PostgreSQL, Oracle, MS SQL server 등.
 
 ## 2)비관계형 데이터 베이스(NoSQL)
 * 테이블 구조가 아닌 다양한 방식으로 데이터를 저장
